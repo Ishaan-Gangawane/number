@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Duplicates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let name of distinctNames"
+        [ngClass]="getClass(name.duplicates)">
+      <td>{{ name.name }}</td>
+      <td>{{ name.duplicates }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
